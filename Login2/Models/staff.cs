@@ -17,7 +17,7 @@ namespace Login2.Models
     {
         public int ID { get; set; }
         public int Account_id { get; set; }
-        [Required(ErrorMessage = "Room name must not be empty.")]
+        [Required(ErrorMessage = "Name must not be empty.")]
         [MaxLength(20, ErrorMessage = "Maximum of 20 characters is allowed.")]
         public string Name { get; set; }
         [DataType(DataType.DateTime, ErrorMessage = "Invalid Datetime")]

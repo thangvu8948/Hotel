@@ -24,6 +24,7 @@ namespace Login2.Models
         {
             throw new UnintentionalCodeFirstException();
         }
+        private bool isUsing = false;
     
         public virtual DbSet<account> accounts { get; set; }
         public virtual DbSet<booking_details> booking_details { get; set; }
@@ -38,5 +39,7 @@ namespace Login2.Models
         public virtual DbSet<service> services { get; set; }
         public virtual DbSet<staff> staffs { get; set; }
         public virtual DbSet<service_details> service_details { get; set; }
+
+        public bool IsUsing { get { return isUsing; } set { isUsing = value; } }
     }
 }

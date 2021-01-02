@@ -16,7 +16,7 @@ namespace Login2.Auxiliary.Repository
         //internal hotelEntities context;
         private static int maxConnection = 10;
         internal DbSet<TEntity> dbSet;
-       
+
         //public BaseRepository()
         //{
         //    this.context = Pooling.Instance.getFreeContext();
@@ -28,15 +28,15 @@ namespace Login2.Auxiliary.Repository
         //    this.dbSet = context.Set<TEntity>();
         //}
 
-        
+
 
         public IEnumerable<TEntity> GetAll()
         {
             var context = Pooling.Instance.getFreeContext();
             dbSet = context.Set<TEntity>();
+            var res = dbSet.ToList();
             context.IsUsing = false;
-            return dbSet.ToList();
-
+            return res;
         }
         public virtual IEnumerable<TEntity> GetWithRawSql(string query,
 
@@ -80,13 +80,15 @@ namespace Login2.Auxiliary.Repository
 
             if (orderBy != null)
             {
+                var res = orderBy(query).ToList();
                 context.IsUsing = false;
-                return orderBy(query).ToList();
+                return res;
             }
             else
             {
+                var res = query.ToList();
                 context.IsUsing = false;
-                return query.ToList();
+                return res;
             }
 
 

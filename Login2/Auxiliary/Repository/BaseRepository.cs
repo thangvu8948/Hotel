@@ -14,12 +14,12 @@ namespace Login2.Auxiliary.Repository
     {
 
         //internal hotelEntities context;
-
+        private static int maxConnection = 10;
         internal DbSet<TEntity> dbSet;
-
+       
         //public BaseRepository()
         //{
-        //    this.context = new hotelEntities();
+        //    this.context = Pooling.Instance.getFreeContext();
         //    dbSet = context.Set<TEntity>();
         //}
         //public BaseRepository(hotelEntities context)
@@ -28,23 +28,25 @@ namespace Login2.Auxiliary.Repository
         //    this.dbSet = context.Set<TEntity>();
         //}
 
+        
+
         public IEnumerable<TEntity> GetAll()
         {
-            using (var context = new hotelEntities())
-            {
-                dbSet = context.Set<TEntity>();
-                return dbSet.ToList();
-            }
+            var context = Pooling.Instance.getFreeContext();
+            dbSet = context.Set<TEntity>();
+            context.IsUsing = false;
+            return dbSet.ToList();
+
         }
         public virtual IEnumerable<TEntity> GetWithRawSql(string query,
 
             params object[] parameters)
         {
-            using (var context = new hotelEntities())
-            {
-                dbSet = context.Set<TEntity>();
-                return dbSet.SqlQuery(query, parameters).ToList();
-            }
+            var context = Pooling.Instance.getFreeContext();
+            dbSet = context.Set<TEntity>();
+            var res = dbSet.SqlQuery(query, parameters).ToList();
+            context.IsUsing = false;
+            return res;
         }
 
         public virtual IEnumerable<TEntity> Get(
@@ -56,104 +58,102 @@ namespace Login2.Auxiliary.Repository
             string includeProperties = "")
 
         {
-            using (var context = new hotelEntities())
+            var context = Pooling.Instance.getFreeContext();
+
+            dbSet = context.Set<TEntity>();
+            IQueryable<TEntity> query = dbSet;
+
+            if (filter != null)
             {
-                dbSet = context.Set<TEntity>();
-                IQueryable<TEntity> query = dbSet;
+                query = query.Where(filter);
+            }
 
-                if (filter != null)
-                {
-                    query = query.Where(filter);
-                }
+            if (includeProperties != null)
+            {
+                foreach (var includeProperty in includeProperties.Split
 
-                if (includeProperties != null)
+                (new char[] { ',' }, StringSplitOptions.RemoveEmptyEntries))
                 {
-                    foreach (var includeProperty in includeProperties.Split
-
-                    (new char[] { ',' }, StringSplitOptions.RemoveEmptyEntries))
-                    {
-                        query = query.Include(includeProperty);
-                    }
-                }
-
-                if (orderBy != null)
-                {
-                    return orderBy(query).ToList();
-                }
-                else
-                {
-                    return query.ToList();
+                    query = query.Include(includeProperty);
                 }
             }
+
+            if (orderBy != null)
+            {
+                context.IsUsing = false;
+                return orderBy(query).ToList();
+            }
+            else
+            {
+                context.IsUsing = false;
+                return query.ToList();
+            }
+
 
         }
 
         public virtual TEntity GetByID(object id)
         {
-            using (var context = new hotelEntities())
-            {
-                dbSet = context.Set<TEntity>();
-                return dbSet.Find(id);
-            }
+            var context = Pooling.Instance.getFreeContext();
+            dbSet = context.Set<TEntity>();
+            context.IsUsing = false;
+            return dbSet.Find(id);
         }
 
         public virtual void Insert(TEntity entity)
         {
-            using (var context = new hotelEntities())
-            {
-                dbSet = context.Set<TEntity>();
-                dbSet.Add(entity);
-                context.SaveChanges();
-            }
+            var context = Pooling.Instance.getFreeContext();
+            dbSet = context.Set<TEntity>();
+            dbSet.Add(entity);
+            context.SaveChanges();
+            context.IsUsing = false;
         }
 
         public virtual void Delete(object id)
         {
-            using (var context = new hotelEntities())
-            {
-                dbSet = context.Set<TEntity>();
-                TEntity entityToDelete = dbSet.Find(id);
-                Delete(entityToDelete);
-                context.SaveChanges();
-            }
+            var context = Pooling.Instance.getFreeContext();
+            dbSet = context.Set<TEntity>();
+            TEntity entityToDelete = dbSet.Find(id);
+            Delete(entityToDelete);
+            context.SaveChanges();
+            context.IsUsing = false;
         }
 
         public virtual void Delete(TEntity entityToDelete)
         {
-            using (var context = new hotelEntities())
+            var context = Pooling.Instance.getFreeContext();
+            dbSet = context.Set<TEntity>();
+            if (context.Entry(entityToDelete).State == EntityState.Detached)
+
             {
-                dbSet = context.Set<TEntity>();
-                if (context.Entry(entityToDelete).State == EntityState.Detached)
+                dbSet.Attach(entityToDelete);
 
-                {
-                    dbSet.Attach(entityToDelete);
-
-                }
-                dbSet.Remove(entityToDelete);
-                context.SaveChanges();
             }
-
+            dbSet.Remove(entityToDelete);
+            context.SaveChanges();
+            context.IsUsing = false;
         }
 
 
         public virtual void Update(TEntity entityToUpdate)
         {
-            using (var context = new hotelEntities())
-            {
-                dbSet = context.Set<TEntity>();
-                dbSet.Attach(entityToUpdate);
+            var context = Pooling.Instance.getFreeContext();
 
-                context.Entry(entityToUpdate).State = EntityState.Modified;
-                context.SaveChanges();
-            }
+            dbSet = context.Set<TEntity>();
+            dbSet.Attach(entityToUpdate);
+
+            context.Entry(entityToUpdate).State = EntityState.Modified;
+            context.SaveChanges();
+            context.IsUsing = false;
+
         }
         public void Save()
         {
-            using (var context = new hotelEntities())
-            {
-                dbSet = context.Set<TEntity>();
-                context.SaveChanges();
-            }
+            var context = Pooling.Instance.getFreeContext();
+
+            dbSet = context.Set<TEntity>();
+            context.SaveChanges();
+            context.IsUsing = false;
         }
         ~BaseRepository()
         {

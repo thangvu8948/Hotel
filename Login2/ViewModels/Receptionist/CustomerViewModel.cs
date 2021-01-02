@@ -1,7 +1,11 @@
 ﻿using GalaSoft.MvvmLight.Command;
+using Login2.Auxiliary.DomainObjects;
 using Login2.Auxiliary.Helpers;
 using Login2.Auxiliary.Repository;
+using Login2.Auxiliary.Scanner;
 using Login2.Models;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -21,12 +25,14 @@ namespace Login2.ViewModels.Receptionist
         private string _contentButton;
         private Visibility _addButtonVisbility;
         private Visibility _updateButtonVisbility;
+        private Visibility _scanButtonVisbility;
         public List<customer> ListCustomer { get => _listCustomer; set { _listCustomer = value; RaisePropertyChanged(); } }
 
         public customer CustomerInfo { get => _customerInfo; set { _customerInfo = value; RaisePropertyChanged(); } }
         public string SearchString { get => _searchString; set { _searchString = value; RaisePropertyChanged(); refeshListCustomer(); } }
         public string ContentButton { get => _contentButton; set { _contentButton = value; RaisePropertyChanged(); } }
         public Visibility AddButtonVisbility { get => _addButtonVisbility; set { _addButtonVisbility = value; RaisePropertyChanged(); } }
+        public Visibility ScanButtonVisbility { get => _scanButtonVisbility; set { _scanButtonVisbility = value; RaisePropertyChanged(); } }
         public Visibility UpdateButtonVisbility { get => _updateButtonVisbility; set { _updateButtonVisbility = value; RaisePropertyChanged(); } }
 
         private IRepository<customer> customerRepository = null;
@@ -34,6 +40,7 @@ namespace Login2.ViewModels.Receptionist
         {
             resetCustomerInfo();
             AddButtonVisbility = Visibility.Visible;
+            ScanButtonVisbility = Visibility.Visible;
             UpdateButtonVisbility = Visibility.Hidden;
             ContentButton = "Thêm khách hàng";
 
@@ -132,6 +139,7 @@ namespace Login2.ViewModels.Receptionist
                 CustomerInfo = (customer)obj;
                 UpdateButtonVisbility = Visibility.Visible;
                 AddButtonVisbility = Visibility.Hidden;
+                ScanButtonVisbility = Visibility.Hidden;
             }
         }
 
@@ -157,6 +165,32 @@ namespace Login2.ViewModels.Receptionist
             customerRepository.Update(CustomerInfo);
             customerRepository.Save();
 
+        }
+        private ICommand _scanCommand;
+        public ICommand ScanCommand
+        {
+            get
+            {
+                return _scanCommand ??
+                     (_scanCommand = new RelayCommand<object>(Execute_Scan, CanExcute_Scan));
+            }
+        }
+
+
+        private bool CanExcute_Scan(object obj)
+        {
+            return true;
+        }
+
+        private void Execute_Scan(object obj)
+        {
+            ScannerModule a = new ScannerModule();
+            a.Show();
+            var b = a.getData();
+            string json = JsonConvert.SerializeObject(b, Formatting.Indented);
+            CustomerInfo = JsonConvert.DeserializeObject<customer>(json);
+            RaisePropertyChanged();
+            //System.Windows.Forms.MessageBox.Show(b.ToString());
         }
     }
 }

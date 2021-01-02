@@ -37,7 +37,7 @@
                             <DatePicker Margin="1"
                             SelectedDate="{Binding DOB, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged,ValidatesOnDataErrors=True}"
                             VerticalAlignment="Bottom"
-                            DisplayDateStart="1/1/1900" DisplayDateEnd="12/31/2020"
+                            DisplayDateStart="1/1/1900" DisplayDateEnd="12/31/2021"
                             materialDesign:HintAssist.Hint="Ngày sinh"
                             Style="{StaticResource MaterialDesignFloatingHintDatePicker}" />
                         </Grid>
@@ -49,6 +49,9 @@
                         </Grid>
                         <Grid DataContext="{Binding Path=DataContext,RelativeSource={RelativeSource AncestorType={x:Type UserControl}}}" HorizontalAlignment="Center" Height="40">
                             <Button Content="Cập nhật" Visibility="{Binding UpdateButtonVisbility}" Command="{Binding Path=UpdateCustomerCommand}" CommandParameter="{Binding CustomerInfo}"></Button>
+                        </Grid>
+                        <Grid DataContext="{Binding Path=DataContext,RelativeSource={RelativeSource AncestorType={x:Type UserControl}}}" HorizontalAlignment="Center" Height="40">
+                            <Button Content="Scan" Visibility="{Binding ScanButtonVisbility}" Command="{Binding Path=ScanCommand}"></Button>
                         </Grid>
                     </StackPanel>
                 </Grid>

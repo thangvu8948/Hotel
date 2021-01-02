@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using Login2.Auxiliary.DomainObjects;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Configuration;

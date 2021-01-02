@@ -3,12 +3,17 @@ using System;
 using System.Drawing;
 using System.Drawing.Imaging;
 using System.IO;
+using System.Linq;
+using System.Reflection;
+using System.Threading.Tasks;
 using System.Windows;
+using System.Windows.Media.Animation;
 using DarrenLee.Media;
 using Login2.Auxiliary.DomainObjects;
 using Login2.Auxiliary.Helpers;
 using Login2.Auxiliary.WebAPIRequest;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 
 namespace Login2.Auxiliary.Scanner
 {
@@ -18,13 +23,19 @@ namespace Login2.Auxiliary.Scanner
     public partial class CaptureScreen : Window
     {
         Camera myCam = new Camera();
-        public CaptureScreen()
+        IWebApiRequest webApiRequest = new FPTApiRequest();
+        private TaskCompletionSource<object> _tcs = new TaskCompletionSource<object>();
+        const int defaultLife = 5;
+        public Task<object> Fetch()
+        {
+            return _tcs.Task;
+        }
+        private int counter;
+        public CaptureScreen(int? lifetime)
         {
             InitializeComponent();
-            GetInfo();
-            myCam.OnFrameArrived += myCam_OnFrameArrived;
+            counter = lifetime == null ? defaultLife : lifetime.Value;
         }
-
         private void myCam_OnFrameArrived(object source, FrameArrivedEventArgs e)
         {
             Image img = e.GetFrame();
@@ -63,23 +74,85 @@ namespace Login2.Auxiliary.Scanner
             myCam.Stop();
         }
 
-        private void Capture_Click(object sender, RoutedEventArgs e)
-        {
-            try
-            {
-                
-                FPTApiRequest fPTApiRequest = new FPTApiRequest();
-                var name = $"{Guid.NewGuid()}.jpg";
-                pictureBoxLoading.Image.Save(name, ImageFormat.Jpeg);
-                var a = fPTApiRequest.Post("idr/vnm", name);
-                File.Delete(name);
-                var strdata = JsonConvert.DeserializeObject<InfoCMT>(a);
-            }
-            catch (Exception ex)
-            {
+        //public void Capture_Click(object sender, RoutedEventArgs e)
+        //{
+        //    try
+        //    {
 
-                throw ex;
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        throw ex;
+        //    }
+        //}
+        //private void RunTopToBottom()
+        //{
+
+        //}
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            GetInfo();
+            myCam.OnFrameArrived += myCam_OnFrameArrived;
+            Start();
+        }
+        private System.Windows.Forms.Timer timer;
+        private void Start()
+        {
+            timer = new System.Windows.Forms.Timer();
+            timer.Tick += new EventHandler(timer_Tick);
+            timer.Interval = 1000; // 1 second
+            timer.Start();
+            Countdown.Content = counter.ToString();
+        }
+
+        private void timer_Tick(object sender, EventArgs e)
+        {
+            counter--;
+            if (counter == 0)
+            {
+                timer.Stop();
+                var filepath = $"{Guid.NewGuid()}.jpg";
+                pictureBoxLoading.Image.Save(filepath, ImageFormat.Jpeg);
+                var temp = webApiRequest.Post("idr/vnm", filepath);
+                var response = JsonConvert.DeserializeObject<InfoCMT>(temp);
+                File.Delete(filepath);
+                TryAgian(response.errorMessage, response.errorCode!=0?null: response.data[0]);
+            }
+            Countdown.Content = counter.ToString();
+        }
+        private void TryAgian(string message,dynamic data)
+        {
+            double exact = 0;
+            if (data!=null)
+            {
+                exact = (
+                    0 
+                    + Double.Parse(data.id_prob)*(data.id==null?0:1) 
+                    + Double.Parse(data.name_prob) * (data.name == null ? 0 : 1)
+                    + Double.Parse(data.dob_prob) * (data.dob == null ? 0 : 1)
+                    + Double.Parse(data.address_prob) * (data.address == null ? 0 : 1)
+                    ) / 4;
+            }
+           
+            //object a = JsonConvert.DeserializeObject<object>((string)param);
+          
+            MessageBoxResult messageBoxResult = System.Windows.MessageBox.Show($"{message} \n Exactly :{exact}% (<75% -> Let's retry) \n Do you Try Again?", "Confirmation", System.Windows.MessageBoxButton.YesNo, MessageBoxImage.Question);
+            if (messageBoxResult == MessageBoxResult.Yes)
+            {
+                counter = defaultLife;
+                Window_Loaded(null, null);
+            }
+            else
+            {
+                _tcs.SetResult(data);
+                myCam.Stop();
+                this.Close();
             }
         }
+        //private void Scan_Click(object sender, RoutedEventArgs e)
+        //{
+        //    //Start();
+        //    Scan.Visibility = Visibility.Hidden;
+        //}
     }
 }

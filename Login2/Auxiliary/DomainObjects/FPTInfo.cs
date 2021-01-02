@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -16,10 +17,13 @@ namespace Login2.Auxiliary.DomainObjects
     }
     public class Data
     {
+        [JsonProperty("IdentityCard")]
         public string id { get; set; }
         public string id_prob { get; set; }
+        [JsonProperty("FullName")]
         public string name { get; set; }
         public string name_prob { get; set; }
+        [JsonProperty("DOB")]
         public string dob { get; set; }
         public string dob_prob { get; set; }
         public string sex { get; set; }
@@ -28,6 +32,7 @@ namespace Login2.Auxiliary.DomainObjects
         public string nationality_prob { get; set; }
         public string home { get; set; }
         public string home_prob { get; set; }
+        [JsonProperty("Address")]
         public string address { get; set; }
         public string address_prob { get; set; }
         public Address_entities address_entities { get; set; }

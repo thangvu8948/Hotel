@@ -12,6 +12,7 @@ using System.Data;
 using System.Data.Entity.Infrastructure;
 using System.IO;
 using System.Linq;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
 
@@ -23,10 +24,19 @@ namespace Login2
     /// 
     public partial class App : Application
     {
-        public App()
+       public App()
         {
-            CaptureScreen a = new CaptureScreen();
-            a.Show();
+            //CaptureScreen a = new CaptureScreen(lifetime);
+            //a.Show();
+            //var b =  a.Fetch().Result;
+            //ScannerModule a = new ScannerModule();
+            //a.Show();
+            //var b=a.getData();
+            //CaptureScreen login = App.Current.Windows.OfType<CaptureScreen>().FirstOrDefault();
+            //if (login == null)
+            //{
+            //    var b = a.getData();
+            //}
             //FPTApiRequest fPTApiRequest = new FPTApiRequest();
 
             //var a = fPTApiRequest.Post("idr/vnm", "D:\\yyy.jpg");

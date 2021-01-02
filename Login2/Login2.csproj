@@ -160,6 +160,7 @@
     <Compile Include="Auxiliary\Scanner\CaptureScreen.xaml.cs">
       <DependentUpon>CaptureScreen.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Auxiliary\Scanner\ScannerModule.cs" />
     <Compile Include="Auxiliary\Validations\Simple_Validations.cs" />
     <Compile Include="Auxiliary\WebAPIRequest\IWebApiRequest.cs" />
     <Compile Include="Auxiliary\WebAPIRequest\ParamObject.cs" />

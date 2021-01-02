@@ -9,7 +9,7 @@
         mc:Ignorable="d"
         Loaded="Window_Loaded"
         Closing="Window_Closing"
-        Title="CaptureScreen" Height="600" Width="800">
+        Title="CaptureScreen" Height="576" Width="800">
     <Canvas>
         <TextBlock Text="Type Photo :" Canvas.Left="270" Canvas.Top="44"></TextBlock>
         <ComboBox Name="TypePhoto" Width="158" Canvas.Left="360" Canvas.Top="32"></ComboBox>
@@ -18,10 +18,11 @@
         <TextBlock Text="Camera Resolution :" Canvas.Left="231" Canvas.Top="110" RenderTransformOrigin="0.135,0.71"></TextBlock>
         <ComboBox Name="Resolution" Width="158" Canvas.Left="360" Canvas.Top="98" SelectionChanged="Resolution_SelectionChanged"></ComboBox>
 
-        <wfi:WindowsFormsHost Height="351" Width="547" Canvas.Left="160" Canvas.Top="144">
+        <wfi:WindowsFormsHost Height="360" Width="636" Canvas.Left="90" Canvas.Top="158">
             <winForms:PictureBox x:Name="pictureBoxLoading" >
             </winForms:PictureBox>
         </wfi:WindowsFormsHost>
-        <Button Background="Blue" x:Name="Countdown" Content="5" Foreground="White"   Canvas.Left="48" Canvas.Top="317" Height="52" Width="60"></Button>
+        <Button Background="Blue" x:Name="Countdown" Content="5" Foreground="White"   Canvas.Left="75" Canvas.Top="62" Height="52" Width="60"></Button>
+        <Button Click="Scan_Click"  x:Name="Scan" Content="Start Scan"   Canvas.Left="611" Canvas.Top="60" Height="40" Width="100" RenderTransformOrigin="3.55,2.154"></Button>
     </Canvas>
 </Window>

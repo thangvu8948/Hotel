@@ -18,11 +18,12 @@ namespace Login2.Auxiliary.Helpers
 {
     public static class ExtraFunction
     {
-        public static Match  getHW(string value) 
+        public static int[]  getWH(string value) 
         {
-            Regex regex = new Regex(@"Width=(?<Width>[0-9]+),Height=(?<Height>[0-9]+)");
+            var token= value.Split(new char[] {',','='});
+            //Regex regex = new Regex(@"Width=(?<Width>[0-9]+),Height=(?<Height>[0-9]+)");
 
-            return regex.Match(value.TrimStart().TrimEnd());
+            return new int[] { Int32.Parse(token[1]), Int32.Parse(token[3].Remove(token[3].Length - 1)) };
         }
         public static List<string> featureOfRole(Roles role)
         {

@@ -47,16 +47,22 @@ namespace Login2.Auxiliary.Scanner
         {
             var cameraDevices = myCam.GetCameraSources();
             var cameraResolution = myCam.GetSupportedResolutions();
+            TypeCamera.Items.Clear();
             foreach (var d in cameraDevices)
             {
                 TypeCamera.Items.Add(d);
             }
+            Resolution.Items.Clear();
             foreach (var r in cameraResolution)
             {
                 Resolution.Items.Add(r);
             }
             TypeCamera.SelectedIndex = 0;
             Resolution.SelectedIndex = 0;
+            var resolution = ExtraFunction.getWH(cameraResolution[0]);
+            pictureBoxLoading.Width = resolution[0];
+            pictureBoxLoading.Height = resolution[1];
+            Scan.Visibility = Visibility.Visible;
         }
 
         private void TypeCamera_SelectionChanged(object sender, System.Windows.Controls.SelectionChangedEventArgs e)
@@ -93,7 +99,7 @@ namespace Login2.Auxiliary.Scanner
         {
             GetInfo();
             myCam.OnFrameArrived += myCam_OnFrameArrived;
-            Start();
+            //Start();
         }
         private System.Windows.Forms.Timer timer;
         private void Start()
@@ -149,10 +155,11 @@ namespace Login2.Auxiliary.Scanner
                 this.Close();
             }
         }
-        //private void Scan_Click(object sender, RoutedEventArgs e)
-        //{
-        //    //Start();
-        //    Scan.Visibility = Visibility.Hidden;
-        //}
+
+        private void Scan_Click(object sender, RoutedEventArgs e)
+        {
+            Start();
+            Scan.Visibility = Visibility.Hidden;
+        }
     }
 }

@@ -117,12 +117,13 @@ namespace Login2.Auxiliary.Scanner
             if (counter == 0)
             {
                 timer.Stop();
-                var filepath = $"{Guid.NewGuid()}.jpg";
-                pictureBoxLoading.Image.Save(filepath, ImageFormat.Jpeg);
+                //var filepath = $"{Guid.NewGuid()}.jpg";
+                //pictureBoxLoading.Image.Save(filepath, ImageFormat.Jpeg);
+                var filepath = @"D:\cmt.jpg";
                 var temp = webApiRequest.Post("idr/vnm", filepath);
-                var response = JsonConvert.DeserializeObject<InfoCMT>(temp);
-                File.Delete(filepath);
-                TryAgian(response.errorMessage, response.errorCode!=0?null: response.data[0]);
+                var response = JsonConvert.DeserializeObject<dynamic>(temp);
+                //File.Delete(filepath);
+                TryAgian(response.errorMessage.Value, response.errorCode.Value!=0?null: response.data.First);
             }
             Countdown.Content = counter.ToString();
         }
@@ -133,10 +134,10 @@ namespace Login2.Auxiliary.Scanner
             {
                 exact = (
                     0 
-                    + Double.Parse(data.id_prob)*(data.id==null?0:1) 
-                    + Double.Parse(data.name_prob) * (data.name == null ? 0 : 1)
-                    + Double.Parse(data.dob_prob) * (data.dob == null ? 0 : 1)
-                    + Double.Parse(data.address_prob) * (data.address == null ? 0 : 1)
+                    + Double.Parse(data.id_prob.Value)*(data.id.Value == null?0:1) 
+                    + Double.Parse(data.name_prob.Value) * (data.name.Value == null ? 0 : 1)
+                    + Double.Parse(data.dob_prob.Value) * (data.dob.Value == null ? 0 : 1)
+                    + Double.Parse(data.address_prob.Value) * (data.address.Value == null ? 0 : 1)
                     ) / 4;
             }
            

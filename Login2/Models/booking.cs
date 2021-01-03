@@ -18,6 +18,7 @@ namespace Login2.Models
         public booking()
         {
             this.booking_details = new HashSet<booking_details>();
+            this.rooms = new HashSet<room>();
         }
     
         public int ID { get; set; }
@@ -31,5 +32,7 @@ namespace Login2.Models
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<booking_details> booking_details { get; set; }
         public virtual customer customer { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<room> rooms { get; set; }
     }
 }

@@ -435,6 +435,15 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="Assets\check-out.png" />
+    <Resource Include="Assets\hotel-key.png" />
+    <Resource Include="Assets\cleaning.png" />
+    <Resource Include="Assets\tools.png" />
+    <Resource Include="Assets\hotel.png" />
+    <Resource Include="Assets\bed.png" />
+    <Resource Include="Assets\single-bed.png" />
+  </ItemGroup>
+  <ItemGroup>
     <Content Include="Models\Hotel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>Hotel.edmx</DependentUpon>
@@ -445,15 +454,6 @@
       <DependentUpon>Hotel.edmx</DependentUpon>
       <LastGenOutput>Hotel.cs</LastGenOutput>
     </Content>
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Assets\check-out.png" />
-    <Resource Include="Assets\hotel-key.png" />
-    <Resource Include="Assets\cleaning.png" />
-    <Resource Include="Assets\tools.png" />
-    <Resource Include="Assets\hotel.png" />
-    <Resource Include="Assets\bed.png" />
-    <Resource Include="Assets\single-bed.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

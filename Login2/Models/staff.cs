@@ -31,7 +31,7 @@ namespace Login2.Models
         [Required(AllowEmptyStrings = false, ErrorMessage = "Phone must not be empty.")]
         [MaxLength(10, ErrorMessage = "Maximum of 10 characters is allowed.")]
         [RegularExpression("0([0-9]{9})",
- ErrorMessage = "Invalid Phone")]
+ErrorMessage = "Invalid Phone")]
         public string Phone { get; set; }
         [Required(ErrorMessage = "Required")]
         [StringLength(50, ErrorMessage = "Max 50 characters")]
@@ -40,7 +40,7 @@ namespace Login2.Models
         [Required(AllowEmptyStrings = false, ErrorMessage = "IdentityCard must not be empty.")]
         [MaxLength(50, ErrorMessage = "Maximum of 50 characters is allowed.")]
         public string Address { get; set; }
-
+    
         public virtual account account { get; set; }
     }
 }

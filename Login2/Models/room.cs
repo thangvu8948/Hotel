@@ -20,7 +20,7 @@ namespace Login2.Models
         {
             this.booking_details = new HashSet<booking_details>();
         }
-
+    
         public int ID { get; set; }
         [Required(AllowEmptyStrings = false, ErrorMessage = "Room name must not be empty.")]
         [MaxLength(20, ErrorMessage = "Maximum of 20 characters is allowed.")]
@@ -31,10 +31,11 @@ namespace Login2.Models
         [Required(ErrorMessage = "Max people must not be empty.")]
         [Range(1, 10, ErrorMessage = "Enter a value between 1 and 10")]
         public int MaxPeople { get; set; }
-
+    
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<booking_details> booking_details { get; set; }
         public virtual room_status room_status { get; set; }
         public virtual room_type room_type { get; set; }
+        public virtual booking booking { get; set; }
     }
 }

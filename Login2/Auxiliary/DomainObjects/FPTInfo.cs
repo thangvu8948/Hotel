@@ -41,12 +41,13 @@ namespace Login2.Auxiliary.DomainObjects
         public string doe_prob { get; set; }
         public string type { get; set; }
         public string Fullname { get; set; }
-        public string Identitycard { get; set; }
+        public string IdentityCard { get; set; }
+        public string Phone { get; set; }
 
         public void SupportConvert()
         {
             Fullname = name;
-            Identitycard = id;
+            IdentityCard = id;
             id = "0";
             if (!ExtraFunction.ValidDateTime(dob))
             {

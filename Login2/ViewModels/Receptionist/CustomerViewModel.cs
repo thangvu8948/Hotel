@@ -85,6 +85,7 @@ namespace Login2.ViewModels.Receptionist
             customerRepository.Insert(CustomerInfo);
             customerRepository.Save();
             resetCustomerInfo();
+            refeshList();
             System.Windows.Forms.MessageBox.Show("Thêm khách hàng mới thành công", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
@@ -146,14 +147,18 @@ namespace Login2.ViewModels.Receptionist
 
         private List<customer> searchCustomer(string customerName)
         {
-            return customerRepository.Get((x) => x.FullName.Contains(customerName)).ToList();
+            return customerRepository.Get((x) => x.FullName.Contains(customerName) || x.IdentityCard.Contains(customerName)).ToList();
         }
 
         private void refeshListCustomer()
         {
             ListCustomer = searchCustomer(SearchString);
         }
-
+        private void refeshList()
+        {
+            ListCustomer.Clear();
+            ListCustomer = customerRepository.GetAll().ToList();
+        }
         private void updateCustomer(customer customer)
         {
             //using (var db = new hotelEntities())
@@ -164,6 +169,7 @@ namespace Login2.ViewModels.Receptionist
             //}
             customerRepository.Update(CustomerInfo);
             customerRepository.Save();
+            refeshList();
 
         }
         private ICommand _scanCommand;
@@ -190,8 +196,20 @@ namespace Login2.ViewModels.Receptionist
                 a.Show();
                 var b = (a.getData() as JObject).ToObject<Data>();
                 b.SupportConvert();
-                string json = JsonConvert.SerializeObject(b, Formatting.Indented);
-                CustomerInfo = JsonConvert.DeserializeObject<customer>(json);
+                var existcustomer = customerRepository.Get(x => x.IdentityCard == b.IdentityCard).FirstOrDefault();
+                if (existcustomer != null)
+                {
+                    existcustomer.Phone = existcustomer.Phone + " ( Let's check again! ) ";
+                    CustomerInfo = existcustomer;
+                    UpdateButtonVisbility = Visibility.Visible;
+                    AddButtonVisbility = Visibility.Hidden;
+                }
+                else
+                {
+                    string json = JsonConvert.SerializeObject(b, Formatting.Indented);
+                    CustomerInfo = JsonConvert.DeserializeObject<customer>(json);
+                }
+               
                 RaisePropertyChanged();
             }
             catch (Exception ex)

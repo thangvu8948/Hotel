@@ -189,7 +189,6 @@ namespace Login2.ViewModels.Receptionist
                 ScannerModule a = new ScannerModule();
                 a.Show();
                 var b = (a.getData() as JObject).ToObject<Data>();
-                b.dob = "1008/1999";
                 b.SupportConvert();
                 string json = JsonConvert.SerializeObject(b, Formatting.Indented);
                 CustomerInfo = JsonConvert.DeserializeObject<customer>(json);

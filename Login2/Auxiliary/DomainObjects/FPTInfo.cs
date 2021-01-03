@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using Login2.Auxiliary.Helpers;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -47,6 +48,10 @@ namespace Login2.Auxiliary.DomainObjects
             Fullname = name;
             Identitycard = id;
             id = "0";
+            if (!ExtraFunction.ValidDateTime(dob))
+            {
+                dob = "";
+            }
         }
 
     }

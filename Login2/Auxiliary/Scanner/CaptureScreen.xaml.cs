@@ -25,7 +25,7 @@ namespace Login2.Auxiliary.Scanner
         Camera myCam = new Camera();
         IWebApiRequest webApiRequest = new FPTApiRequest();
         private TaskCompletionSource<object> _tcs = new TaskCompletionSource<object>();
-        const int defaultLife = 5;
+        const int defaultLife = 6;
         public Task<object> Fetch()
         {
             return _tcs.Task;
@@ -114,15 +114,15 @@ namespace Login2.Auxiliary.Scanner
         private void timer_Tick(object sender, EventArgs e)
         {
             counter--;
-            if (counter == 0)
+            if (counter == 1)
             {
                 timer.Stop();
-                //var filepath = $"{Guid.NewGuid()}.jpg";
-                //pictureBoxLoading.Image.Save(filepath, ImageFormat.Jpeg);
-                var filepath = @"D:\cmt.jpg";
+                var filepath = $"{Guid.NewGuid()}.jpg";
+                pictureBoxLoading.Image.Save(filepath, ImageFormat.Jpeg);
+                //var filepath = @"D:\cmt.jpg";
                 var temp = webApiRequest.Post("idr/vnm", filepath);
                 var response = JsonConvert.DeserializeObject<dynamic>(temp);
-                //File.Delete(filepath);
+                File.Delete(filepath);
                 TryAgian(response.errorMessage.Value, response.errorCode.Value!=0?null: response.data.First);
             }
             Countdown.Content = counter.ToString();
@@ -136,7 +136,7 @@ namespace Login2.Auxiliary.Scanner
                     0 
                     + Double.Parse(data.id_prob.Value)*(data.id.Value == null?0:1) 
                     + Double.Parse(data.name_prob.Value) * (data.name.Value == null ? 0 : 1)
-                    + Double.Parse(data.dob_prob.Value) * (data.dob.Value == null ? 0 : 1)
+                    + Double.Parse(data.dob_prob.Value) * (ExtraFunction.ValidDateTime(data.dob.Value)==false ? 0 : 1)
                     + Double.Parse(data.address_prob.Value) * (data.address.Value == null ? 0 : 1)
                     ) / 4;
             }
@@ -147,7 +147,8 @@ namespace Login2.Auxiliary.Scanner
             if (messageBoxResult == MessageBoxResult.Yes)
             {
                 counter = defaultLife;
-                Window_Loaded(null, null);
+                //Window_Loaded(null, null);
+                Start();
             }
             else
             {

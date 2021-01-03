@@ -18,6 +18,14 @@ namespace Login2.Auxiliary.Helpers
 {
     public static class ExtraFunction
     {
+        public static bool ValidDateTime(string dateString)
+        {
+            DateTime dateValue;
+            if (DateTime.TryParse(dateString, out dateValue))
+                return true;
+            else
+                return false;
+        }
         public static int[]  getWH(string value) 
         {
             var token= value.Split(new char[] {',','='});

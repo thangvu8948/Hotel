@@ -1,4 +1,6 @@
 ﻿using Login2.Auxiliary.DomainObjects;
+using Login2.Auxiliary.Repository;
+using Login2.Models;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
@@ -18,33 +20,55 @@ namespace Login2.Auxiliary.WebAPIRequest
     {
         internal static string webApiUrl = ConfigurationManager.AppSettings["FPTApiUrl"];
         internal static string apikey = ConfigurationManager.AppSettings["FPTAPIKey"];
+		internal static string apiname = ConfigurationManager.AppSettings["API_ID_RECO"];
 
-        public string Get(string uri, ParamObject param = null, string jwtToken = null)
+
+		public string Get(string uri, ParamObject param = null, string jwtToken = null)
         {
             return null;
         }
 
         public string Post(string uri, object param = null, string jwtToken = null)
         {
+			
             string filePath = param.ToString();
             string url = string.Format("{0}{1}", webApiUrl, uri);
-			try
-			{
-				var httpClient = new HttpClient();
-				var fileStream = File.Open(filePath, FileMode.Open);
-				var fileInfo = new FileInfo(filePath);
-				var content = new MultipartFormDataContent();
-				content.Headers.Add("api_key", apikey);
-				content.Add(new StreamContent(fileStream), "\"image\"", string.Format("\"{0}\"", "image" + fileInfo.Extension));
-				var response =  httpClient.PostAsync(url, content).Result;
-				var res =  response.Content.ReadAsStringAsync().Result;
-				return res;
+			var keys = GetAPIKeyFromDB();
+			foreach (api key in keys)
+            {
+				try
+				{
+					var httpClient = new HttpClient();
+					var fileStream = File.Open(filePath, FileMode.Open);
+					var fileInfo = new FileInfo(filePath);
+					var content = new MultipartFormDataContent();
+					content.Headers.Add("api_key", key.api_key);
+					content.Add(new StreamContent(fileStream), "\"image\"", string.Format("\"{0}\"", "image" + fileInfo.Extension));
+					var response = httpClient.PostAsync(url, content).Result;
+					var res = response.Content.ReadAsStringAsync().Result;
+					var o = JsonConvert.DeserializeObject<dynamic>(res);
+					if (o.message != null && o.message.Value.Contains("limit")) 
+                    {
+						continue;
+                    }
+					return res;
+				}
+				catch (Exception ex)
+				{
+					return null;
+				}
 			}
-			catch (Exception ex)
-			{
-				throw ex;
-			}
+			return null;
 
 		}
+
+		private List<api> GetAPIKeyFromDB()
+        {
+			IRepository<api> repository = new BaseRepository<api>();
+			var keys = repository.Get(u => u.api_name.Equals(apiname));
+			var keyList = keys.ToList();
+
+			return keyList;
+        }
     }
 }

@@ -10,6 +10,7 @@ using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
 using System.Data.Entity.Infrastructure;
+using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Threading;
@@ -61,6 +62,7 @@ namespace Login2
             //}
             //Register Syncfusion license
             SyncfusionLicenseProvider.RegisterLicense("Mjk2ODUxQDMxMzgyZTMyMmUzMEFOYzB1NnJieDc3QUNkRUQrQ3pUZHVqR0w3UjB5S3BBNW5qdmRsS1RQZ2s9");
+            //System.Threading.Thread.CurrentThread.CurrentCulture = new CultureInfo("vi-VN");
         }
 
     }

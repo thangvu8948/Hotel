@@ -5,6 +5,7 @@ using Login2.Auxiliary.Repository;
 using Login2.Auxiliary.Scanner;
 using Login2.Models;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
@@ -140,7 +141,7 @@ namespace Login2.ViewModels.Receptionist
                 CustomerInfo = (customer)obj;
                 UpdateButtonVisbility = Visibility.Visible;
                 AddButtonVisbility = Visibility.Hidden;
-                ScanButtonVisbility = Visibility.Hidden;
+                //ScanButtonVisbility = Visibility.Hidden;
             }
         }
 
@@ -206,16 +207,17 @@ namespace Login2.ViewModels.Receptionist
                 }
                 else
                 {
+                    var format = "dd/MM/yyyy"; // your datetime format
+                    var dateTimeConverter = new IsoDateTimeConverter { DateTimeFormat = format };
                     string json = JsonConvert.SerializeObject(b, Formatting.Indented);
-                    CustomerInfo = JsonConvert.DeserializeObject<customer>(json);
+                    CustomerInfo = JsonConvert.DeserializeObject<customer>(json, dateTimeConverter);
                 }
                
                 RaisePropertyChanged();
             }
             catch (Exception ex)
             {
-
-                throw;
+                resetCustomerInfo();
             }
             
             //System.Windows.Forms.MessageBox.Show(b.ToString());

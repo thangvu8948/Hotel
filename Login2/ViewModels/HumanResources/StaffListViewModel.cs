@@ -116,7 +116,9 @@ namespace Login2.ViewModels.HumanResources
             get
             {
                 return _updateRoleViewCommand ??
-                     (_updateRoleViewCommand = new RoleBasedSecurityCommand<object>(CanExecute_UpdateRoleView, Execute_UpdateRoleView));
+                     (_updateRoleViewCommand = new RoleBasedSecurityCommand<object>(
+                         CanExecute_UpdateRoleView, 
+                        Execute_UpdateRoleView));
             }
         }
 

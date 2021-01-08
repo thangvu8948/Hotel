@@ -23,7 +23,7 @@ namespace Login2.Auxiliary.Scanner
     public partial class CaptureScreen : Window
     {
         Camera myCam = new Camera();
-        IWebApiRequest webApiRequest = new FPTApiRequest();
+        IWebApiRequest webApiRequest;
         private TaskCompletionSource<object> _tcs = new TaskCompletionSource<object>();
         const int defaultLife = 6;
         public Task<object> Fetch()
@@ -31,8 +31,9 @@ namespace Login2.Auxiliary.Scanner
             return _tcs.Task;
         }
         private int counter;
-        public CaptureScreen(int? lifetime)
+        public CaptureScreen(int? lifetime, IWebApiRequest webApi)
         {
+            webApiRequest = webApi;
             InitializeComponent();
             counter = lifetime == null ? defaultLife : lifetime.Value;
         }

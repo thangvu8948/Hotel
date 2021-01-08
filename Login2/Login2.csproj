@@ -416,6 +416,7 @@
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>Hotel.Designer.cs</LastGenOutput>
     </EntityDeploy>
+    <None Include="ClassDiagram1.cd" />
     <None Include="Models\Hotel.edmx.diagram">
       <DependentUpon>Hotel.edmx</DependentUpon>
     </None>

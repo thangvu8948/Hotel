@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Login2.Auxiliary.WebAPIRequest;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,7 +13,7 @@ namespace Login2.Auxiliary.Scanner
         CaptureScreen cpt;
         public ScannerModule()
         {
-            cpt= new CaptureScreen(null);
+            cpt= new CaptureScreen(null, new FPTApiRequest());
         }
         public object getData()
         {

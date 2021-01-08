@@ -1,0 +1,923 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Login2.App" Collapsed="true">
+    <Position X="45.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>App.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Login2.Auxiliary.Converters.ConverterForSelectedChange" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="45.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAIAAAAAAAAgAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Auxiliary\Converters\ConverterForSelectedChange.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Login2.Auxiliary.Converters.ConvertObjectToString" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="47.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAIAAAAAAAAgAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Auxiliary\Converters\ConvertObjectToString.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Login2.Auxiliary.DomainObjects.Address_entities" Collapsed="true">
+    <Position X="42.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAEAAAAAAAAAAAAAAAAAAgAAAAQAAAAAAAI=</HashCode>
+      <FileName>Auxiliary\DomainObjects\FPTInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Login2.Auxiliary.DomainObjects.Data" Collapsed="true">
+    <Position X="54.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAgAgAAAAAAgAAAQQIEAAgAAIFAAAEEAAIIAAEAgg=</HashCode>
+      <FileName>Auxiliary\DomainObjects\FPTInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Login2.Auxiliary.DomainObjects.InfoCMT" Collapsed="true">
+    <Position X="51" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAIAAAQAAAAAAA=</HashCode>
+      <FileName>Auxiliary\DomainObjects\FPTInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Login2.Auxiliary.DomainObjects.ParametersForSwitchView" Collapsed="true">
+    <Position X="56.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAgAAAAAIAAAAAAAAAgAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Auxiliary\DomainObjects\ParametersForSwitchView.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Login2.Auxiliary.DomainObjects.RePass" Collapsed="true">
+    <Position X="54.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAAIAAAAAAAAAAAAAgAAAAAAQAAAgAAAAAAAAAAAA=</HashCode>
+      <FileName>Auxiliary\DomainObjects\RePass.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Login2.Auxiliary.Helpers.AuthorizationAttribute">
+    <Position X="36.5" Y="6" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAEAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Auxiliary\Helpers\AuthorizationAttribute.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Login2.Auxiliary.Helpers.ConvertEnumToList" Collapsed="true">
+    <Position X="44" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAIAAAAA=</HashCode>
+      <FileName>Auxiliary\Helpers\ConvertEnumToList.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Login2.Auxiliary.Helpers.ExtraFunction" Collapsed="true">
+    <Position X="40.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>KAAAAAAAQAAAAAAAABAAAABAAAAAAEAAEABAAAAAAAg=</HashCode>
+      <FileName>Auxiliary\Helpers\ExtraFunction.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Login2.Auxiliary.Helpers.ParameterSetter" Collapsed="true">
+    <Position X="54.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Auxiliary\Helpers\MessengerClass.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Login2.Auxiliary.Helpers.Parameter" Collapsed="true">
+    <Position X="52.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Auxiliary\Helpers\MessengerClass.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Login2.Auxiliary.Helpers.SwitchView" Collapsed="true">
+    <Position X="51" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Auxiliary\Helpers\MessengerClass.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Login2.Auxiliary.Helpers.Session" Collapsed="true">
+    <Position X="42.25" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAEgAAAAAABAAAAAQAAAABAAAAAAA=</HashCode>
+      <FileName>Auxiliary\Helpers\Session.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Login2.Auxiliary.Repository.BaseRepository&lt;TEntity&gt;" BaseTypeListCollapsed="true">
+    <Position X="38" Y="2.25" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAQAAMAAAAAAAABAAAAAAAAAAAEEAAAACgAAgAAABAA=</HashCode>
+      <FileName>Auxiliary\Repository\BaseRepository.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Login2.Auxiliary.Repository.Pooling">
+    <Position X="30.75" Y="2.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AACEAAAAAAAAAAAAAAAAAAAACAAEABAAQAAAAAAAAAA=</HashCode>
+      <FileName>Auxiliary\Repository\Pooling.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Login2.Auxiliary.Scanner.CaptureScreen" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="54.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQQAACAASAEAAAAABEAAAgAAAAEAEFAAAAAAgGAAEA=</HashCode>
+      <FileName>Auxiliary\Scanner\CaptureScreen.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Login2.Auxiliary.Scanner.ScannerModule" Collapsed="true">
+    <Position X="54.5" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQAAAAAAAAAAAAAAAAAAAAAAAEAAAAAIAAAAAAAAA=</HashCode>
+      <FileName>Auxiliary\Scanner\ScannerModule.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Login2.Auxiliary.Validations.IsInt_Validation" Collapsed="true">
+    <Position X="42.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Auxiliary\Validations\Simple_Validations.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Login2.Auxiliary.WebAPIRequest.FPTApiRequest" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="42.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAAAAAAAAAAABAAAAAgAAADQAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Auxiliary\WebAPIRequest\FPTApiRequest.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Login2.Auxiliary.WebAPIRequest.ParamObject" Collapsed="true">
+    <Position X="40.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAgAAAAAAA=</HashCode>
+      <FileName>Auxiliary\WebAPIRequest\ParamObject.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Login2.Commands.RoleBasedSecurityCommand&lt;T&gt;" BaseTypeListCollapsed="true">
+    <Position X="31.75" Y="6" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAEACAAQAAECAAEAAAAAACAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Commands\RoleBasedSecurityCommand.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="BaseModel">
+    <Position X="2.25" Y="6.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAQABKSAAAAAIgAAAAEAIQAAAAAAAAAA=</HashCode>
+      <FileName>Models\BaseModel.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Login2.Models.hotelEntities" Collapsed="true">
+    <Position X="32.75" Y="3.25" Width="1.25" />
+    <TypeIdentifier>
+      <HashCode>AAQJAAABCAABAAAAIAICIAAAEIAggAAAAAAAEIAAAEA=</HashCode>
+      <FileName>Models\Hotel.Context.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Login2.Models.account" Collapsed="true">
+    <Position X="40.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAgABAAAAgAAAECAAIAAAAAAAAgACAQAAAAAAAAA=</HashCode>
+      <FileName>Models\account.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Login2.Models.api" Collapsed="true">
+    <Position X="44" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAgA=</HashCode>
+      <FileName>Models\api.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Login2.Models.booking" Collapsed="true">
+    <Position X="44" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAJAAAAgAAAACIAAAAAAAAgQQAAAgAAAAAAAAA=</HashCode>
+      <FileName>Models\booking.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Login2.Models.booking_details" Collapsed="true">
+    <Position X="45.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAABAAAFACAA0AAAACAAAACQAAAgggAAQAAAAgAAAAA=</HashCode>
+      <FileName>Models\booking_details.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Login2.Models.booking_status" Collapsed="true">
+    <Position X="47.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQIAAAgAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\booking_status.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Login2.Models.customer" Collapsed="true">
+    <Position X="2.75" Y="11.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAABCAAAgIAAICAAAAAgAAAAAgAAAAAAIAAAAAA=</HashCode>
+      <FileName>Models\customer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Login2.Models.customer_type" Collapsed="true">
+    <Position X="51" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAABAAAAgAAAACAAAAAAAAAAAgAAAAAAAAAAAAg=</HashCode>
+      <FileName>Models\customer_type.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Login2.Models.role" Collapsed="true">
+    <Position X="42.25" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAABAAAAgAAAACAAAAAAAIAAAgAAAAAAAAAAAAg=</HashCode>
+      <FileName>Models\role.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Login2.Models.room" Collapsed="true">
+    <Position X="4.5" Y="11.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEAQAAgAAAAACAAAAAAAAgAAAAQQAAEBAAAEA=</HashCode>
+      <FileName>Models\room.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Login2.Models.room_status" Collapsed="true">
+    <Position X="47.5" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAgAAAAAIAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\room_status.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Login2.Models.room_type" Collapsed="true">
+    <Position X="49.25" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAgAAAAAIAAAAAAAAAABAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\room_type.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Login2.Models.service" Collapsed="true">
+    <Position X="56.25" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAABAQAAgAAAACAAAAAAAAAAggAAAAAAAAAABAA=</HashCode>
+      <FileName>Models\service.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Login2.Models.service_details" Collapsed="true">
+    <Position X="40.5" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAACAAAQAAAAAAAEAAAAAABAAgAAABAEAAAAAAAAA=</HashCode>
+      <FileName>Models\service_details.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Login2.Models.staff" Collapsed="true">
+    <Position X="1" Y="11.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAACCAAgIAAAAAAAAQgAAAAAAACAAAAYAAAAAA=</HashCode>
+      <FileName>Models\staff.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Login2.Properties.CanBeNullAttribute" Collapsed="true">
+    <Position X="51" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Properties\Annotations.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Login2.Properties.NotNullAttribute" Collapsed="true">
+    <Position X="51" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Properties\Annotations.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Login2.Properties.StringFormatMethodAttribute" Collapsed="true">
+    <Position X="49.25" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Properties\Annotations.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Login2.Properties.InvokerParameterNameAttribute" Collapsed="true">
+    <Position X="40.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Properties\Annotations.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Login2.Properties.NotifyPropertyChangedInvocatorAttribute" Collapsed="true">
+    <Position X="49.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAA=</HashCode>
+      <FileName>Properties\Annotations.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Login2.Properties.ContractAnnotationAttribute" Collapsed="true">
+    <Position X="42.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAIAAAAAAA=</HashCode>
+      <FileName>Properties\Annotations.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Login2.Properties.LocalizationRequiredAttribute" Collapsed="true">
+    <Position X="44" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Properties\Annotations.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Login2.Properties.CannotApplyEqualityOperatorAttribute" Collapsed="true">
+    <Position X="52.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Properties\Annotations.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Login2.Properties.BaseTypeRequiredAttribute" Collapsed="true">
+    <Position X="42.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAA=</HashCode>
+      <FileName>Properties\Annotations.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Login2.Properties.UsedImplicitlyAttribute" Collapsed="true">
+    <Position X="52.75" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Properties\Annotations.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Login2.Properties.MeansImplicitUseAttribute" Collapsed="true">
+    <Position X="47.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Properties\Annotations.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Login2.Properties.PublicAPIAttribute" Collapsed="true">
+    <Position X="47.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Properties\Annotations.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Login2.Properties.InstantHandleAttribute" Collapsed="true">
+    <Position X="56.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Properties\Annotations.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Login2.Properties.PureAttribute" Collapsed="true">
+    <Position X="49.25" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Properties\Annotations.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Login2.Properties.PathReferenceAttribute" Collapsed="true">
+    <Position X="2.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Properties\Annotations.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Login2.Properties.AspMvcAreaMasterLocationFormatAttribute" Collapsed="true">
+    <Position X="51" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Properties\Annotations.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Login2.Properties.AspMvcAreaPartialViewLocationFormatAttribute" Collapsed="true">
+    <Position X="52.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Properties\Annotations.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Login2.Properties.AspMvcAreaViewLocationFormatAttribute" Collapsed="true">
+    <Position X="54.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Properties\Annotations.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Login2.Properties.AspMvcMasterLocationFormatAttribute" Collapsed="true">
+    <Position X="45.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Properties\Annotations.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Login2.Properties.AspMvcPartialViewLocationFormatAttribute" Collapsed="true">
+    <Position X="49.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Properties\Annotations.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Login2.Properties.AspMvcViewLocationFormatAttribute" Collapsed="true">
+    <Position X="54.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Properties\Annotations.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Login2.Properties.AspMvcActionAttribute" Collapsed="true">
+    <Position X="47.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Properties\Annotations.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Login2.Properties.AspMvcAreaAttribute" Collapsed="true">
+    <Position X="0.5" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Properties\Annotations.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Login2.Properties.AspMvcControllerAttribute" Collapsed="true">
+    <Position X="56.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Properties\Annotations.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Login2.Properties.AspMvcMasterAttribute" Collapsed="true">
+    <Position X="44" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Properties\Annotations.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Login2.Properties.AspMvcModelTypeAttribute" Collapsed="true">
+    <Position X="47.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Properties\Annotations.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Login2.Properties.AspMvcPartialViewAttribute" Collapsed="true">
+    <Position X="2.75" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Properties\Annotations.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Login2.Properties.AspMvcSupressViewErrorAttribute" Collapsed="true">
+    <Position X="51" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Properties\Annotations.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Login2.Properties.AspMvcDisplayTemplateAttribute" Collapsed="true">
+    <Position X="40.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Properties\Annotations.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Login2.Properties.AspMvcEditorTemplateAttribute" Collapsed="true">
+    <Position X="42.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Properties\Annotations.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Login2.Properties.AspMvcTemplateAttribute" Collapsed="true">
+    <Position X="52.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Properties\Annotations.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Login2.Properties.AspMvcViewAttribute" Collapsed="true">
+    <Position X="5" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Properties\Annotations.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Login2.Properties.AspMvcActionSelectorAttribute" Collapsed="true">
+    <Position X="49.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Properties\Annotations.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Login2.Properties.HtmlElementAttributesAttribute" Collapsed="true">
+    <Position X="49.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Properties\Annotations.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Login2.Properties.HtmlAttributeValueAttribute" Collapsed="true">
+    <Position X="47.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Properties\Annotations.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Login2.Properties.RazorSectionAttribute" Collapsed="true">
+    <Position X="51" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Properties\Annotations.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Login2.Properties.Resources" Collapsed="true">
+    <Position X="40.5" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAABEAAAAQAAAAAAAAAAAAAAAIA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Login2.Properties.Settings" Collapsed="true">
+    <Position X="44" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAABAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Login2.ViewModels.Accountant.Data" Collapsed="true">
+    <Position X="56.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAQAAAAAAAAAAAAQAAAAAQAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ViewModels\Accountant\StatisticsViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Login2.ViewModels.Accountant.StatisticsViewModel" Collapsed="true">
+    <Position X="17.25" Y="9.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAIIECBAACAAIAIAAwAAAQQAIAYBwEAAUACAAAEAA=</HashCode>
+      <FileName>ViewModels\Accountant\StatisticsViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Login2.ViewModels.HumanResources.InsertStaffViewModel" Collapsed="true">
+    <Position X="19" Y="9.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAgAAIAACAAAAAAAABCAAAAACAAABAAAUIAAIIAIQA=</HashCode>
+      <FileName>ViewModels\HumanResources\InsertStaffViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Login2.ViewModels.HumanResources.PopUpRoleViewModel" Collapsed="true">
+    <Position X="21" Y="9.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAAAIAACAAgAgAAAACIgIAIAAAABACAAAAAIAAAAA=</HashCode>
+      <FileName>ViewModels\HumanResources\PopUpRoleViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Login2.ViewModels.HumanResources.StaffListViewModel" Collapsed="true">
+    <Position X="22.75" Y="9.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQCoIAAAICAAoAAABIUAAAABAwAAAGAAARiAAAACAAI=</HashCode>
+      <FileName>ViewModels\HumanResources\StaffListViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Login2.ViewModels.LoginViewModel" Collapsed="true">
+    <Position X="24.5" Y="9.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAIAAACAAEAAAAAABAAAIAAAQAAAACAAAA=</HashCode>
+      <FileName>ViewModels\LoginViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Login2.ViewModels.MainViewModel" Collapsed="true">
+    <Position X="26.25" Y="9.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>DAEAjABABAAAAQAUQAEBEABAAYCggAAAAAAABACABIA=</HashCode>
+      <FileName>ViewModels\MainViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Login2.ViewModels.MyBaseViewModel" Collapsed="true">
+    <Position X="20" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAACAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAA=</HashCode>
+      <FileName>ViewModels\MyBaseViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Login2.ViewModels.ProfileViewModel" Collapsed="true">
+    <Position X="13.75" Y="9.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAgIAAAACCAQCgAAAEQKAQAJAAAAAACAIAAESAAEEA=</HashCode>
+      <FileName>ViewModels\ProfileViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Login2.ViewModels.ViewModelFactory">
+    <Position X="15.75" Y="6.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAAAAAAAABAAAAAAAAAAAAAAAAAAQAAAAAAAAAA=</HashCode>
+      <FileName>ViewModels\ViewModelFactory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Login2.ViewModels.ViewModelLocator" Collapsed="true">
+    <Position X="21" Y="3.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>BAEAIAAAQAAAJAAQABIAAAAAAAAAAAAAgBAQBEAASAA=</HashCode>
+      <FileName>ViewModels\ViewModelLocator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Login2.ViewModels.Receptionist.BookingRoomViewModel" Collapsed="true">
+    <Position X="15.5" Y="9.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ViewModels\Receptionist\BookingRoomViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Login2.ViewModels.Receptionist.CheckOutViewModel" Collapsed="true">
+    <Position X="16.5" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QGVQgAREMBACMIIBABIghAQwoCTgDgiINhBQCGAAAAI=</HashCode>
+      <FileName>ViewModels\Receptionist\CheckOutViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Login2.ViewModels.Receptionist.ChooseCustomerViewModel" Collapsed="true">
+    <Position X="18.25" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAgAAAEAAQAAAAiACAAAAECBIAAAAMAAAhAGQECQg=</HashCode>
+      <FileName>ViewModels\Receptionist\ChooseCustomerViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Login2.ViewModels.Receptionist.CustomerViewModel" Collapsed="true">
+    <Position X="20" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEIkAACEIAQAAAQiACCAAAUCRIgAAAMAAChAGRECQg=</HashCode>
+      <FileName>ViewModels\Receptionist\CustomerViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Login2.ViewModels.Receptionist.RentRoomViewModel" Collapsed="true">
+    <Position X="21.75" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QGVAgQRFMAACMIIBABIghAQwoCTgBgiINhAUCGAAAAI=</HashCode>
+      <FileName>ViewModels\Receptionist\RentRoomViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Login2.ViewModels.Receptionist.RoomOptionViewModel" Collapsed="true">
+    <Position X="23.5" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BGAQAAEFBAAAIBgIABAAIAAoIAAAAgBCEAAAACAAAAA=</HashCode>
+      <FileName>ViewModels\Receptionist\RoomOptionViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Login2.ViewModels.Receptionist.RoomViewModel" Collapsed="true">
+    <Position X="25.25" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAQAACQAoAAAAABAFEABABYDAQACBABgCQACA=</HashCode>
+      <FileName>ViewModels\Receptionist\RoomViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Login2.ViewModels.Sales.CustomerListViewModel" Collapsed="true">
+    <Position X="27" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAIAQQAASAAgAAIBcQAAAABAgAAAEAAAAgAAAAAgAo=</HashCode>
+      <FileName>ViewModels\Sales\CustomerListViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Login2.ViewModels.Sales.InsertRoomViewModel" Collapsed="true">
+    <Position X="13" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAIYAAEAAMAAQARAAACAIhAEAAgAgAAAAMAEQAAA=</HashCode>
+      <FileName>ViewModels\Sales\InsertRoomViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Login2.ViewModels.Sales.RoomListViewModel" Collapsed="true">
+    <Position X="14.75" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAoAAQEAEBAsAAQRYQAIAAJAwEAAEAgABgAMQAAhAM=</HashCode>
+      <FileName>ViewModels\Sales\RoomListViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Login2.Views.Accountant.Report" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="56.25" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Views\Accountant\Report.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Login2.Views.Accountant.Statistics" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="47.5" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Views\Accountant\Statistics.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Login2.Views.Home" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="44" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAAAAAAAAAAAAAAAAEAAAAAAIAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Views\Home.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Login2.Views.Login" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="45.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Views\Login.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Login2.Views.Profile" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="45.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Views\Profile.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Login2.Views.HumanResources.InsertStaff" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="54.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Views\HumanResources\InsertStaff.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Login2.Views.HumanResources.PopUpRole" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="44" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Views\HumanResources\PopUpRole.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Login2.Views.HumanResources.StaffList" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="45.75" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Views\HumanResources\StaffList.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Login2.Views.Receptionist.BookingRoom" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="49.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Views\Receptionist\BookingRoom.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Login2.Views.Receptionist.CheckOut" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="56.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Views\Receptionist\CheckOut.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Login2.Views.Receptionist.ChooseCustomer" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="40.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Views\Receptionist\ChooseCustomer.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Login2.Views.Receptionist.Customer" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="49.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Views\Receptionist\Customer.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Login2.Views.Receptionist.RentRoom" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="52.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Views\Receptionist\RentRoom.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Login2.Views.Receptionist.Room" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="45.75" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Views\Receptionist\Room.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Login2.Views.Receptionist.RoomOption" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="52.75" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Views\Receptionist\RoomOption.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Login2.Views.Sales.CustomerList" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="52.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Views\Sales\CustomerList.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Login2.Views.Sales.InsertRoom" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="52.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Views\Sales\InsertRoom.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Login2.Views.Sales.RoomList" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="51" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Views\Sales\RoomList.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Interface Name="Login2.Auxiliary.Repository.IRepository&lt;TEntity&gt;">
+    <Position X="35" Y="2.25" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAQAAMAAAAAAAABAAAAAAAAAAAEAAAAAAgAAgAAABAA=</HashCode>
+      <FileName>Auxiliary\Repository\IRepository.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Login2.Auxiliary.WebAPIRequest.IWebApiRequest" Collapsed="true">
+    <Position X="42.25" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAABAAAAAAAAACAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Auxiliary\WebAPIRequest\IWebApiRequest.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Enum Name="Login2.Auxiliary.Enums.AccountantFeatures" Collapsed="true">
+    <Position X="40.5" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAA=</HashCode>
+      <FileName>Auxiliary\Enums\AccountantFeatures.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Login2.Auxiliary.Enums.AuthorizationType">
+    <Position X="34.5" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAEAAAAAAAA=</HashCode>
+      <FileName>Auxiliary\Enums\AuthorizationType .cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Login2.Auxiliary.Enums.HumanResourcesFeatures" Collapsed="true">
+    <Position X="44" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAA=</HashCode>
+      <FileName>Auxiliary\Enums\HumanResourcesFeatures.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Login2.Auxiliary.Enums.ReceptionistFeatures" Collapsed="true">
+    <Position X="49.25" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAACAAAAAAAAAAAAABAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Auxiliary\Enums\ReceptionistFeatures.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Login2.Auxiliary.Enums.Roles" Collapsed="true">
+    <Position X="51" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAACAAAAAAAAAAgAAABAAAAAAAAAAAAAgAAAAAAAA=</HashCode>
+      <FileName>Auxiliary\Enums\Roles.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Login2.Auxiliary.Enums.RoomStatus" Collapsed="true">
+    <Position X="52.75" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAIAAAEAAAAAAAAAAABAAAAAAEACAAAA=</HashCode>
+      <FileName>Auxiliary\Enums\RoomStatus.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Login2.Auxiliary.Enums.RoomType" Collapsed="true">
+    <Position X="54.5" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAACAAAA=</HashCode>
+      <FileName>Auxiliary\Enums\RoomType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Login2.Auxiliary.Enums.SalesFeatures" Collapsed="true">
+    <Position X="56.25" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAAAAAAAAAABAAAAAAAAAgAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Auxiliary\Enums\SalesFeatures.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Login2.Properties.ImplicitUseKindFlags" Collapsed="true">
+    <Position X="45.75" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAQAAAABAEAAAAAAIAAAAAAAAAAAAAAAgAAAAAA=</HashCode>
+      <FileName>Properties\Annotations.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Login2.Properties.ImplicitUseTargetFlags" Collapsed="true">
+    <Position X="47.5" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAACAAAAAAAIAAAAAAAAAAAAAAEAAAAAAQ=</HashCode>
+      <FileName>Properties\Annotations.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

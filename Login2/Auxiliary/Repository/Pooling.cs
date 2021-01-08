@@ -10,7 +10,7 @@ namespace Login2.Auxiliary.Repository
     class Pooling
     {
         private static Pooling _instance = new Pooling();
-        private int maxConnection = 1;
+        private int maxConnection = 10;
         public static Pooling Instance { get { return _instance; } }
 
         private hotelEntities[] pooling = null;
